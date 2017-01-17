@@ -4,17 +4,37 @@
  
 2. Pre-requisites
  - CentOS 7.x
+ - autoconf, automake, libtool, pam 
+  + yum install autoconf, automake, libtool, pam-devel.x86_64
  
 3. Installation
- - curl -LO# ...
- - tar xvzf ...
- - cd ...
+ - curl -LO# https://mmonit.com/monit/dist/monit-5.20.0.tar.gz
+ - tar xvzf monit-5.20.0.tar.gz
+ - cd monit-5.20.0
  - ./bootstrap
  - ./configure
  - make
  - make install
   
-4. Post-installation
+4. Run
+ - check location of executable file
+  + /usr/local/bin/monit
+ - change mode and owner of monitrc file
+  + chmod 700 monitrc
+  + chmod $owner:$group monitrc
+  + edit monitrc to access remote client 
+   * set httpd port 8080
+   * #set httpd port 8080 and
+   * #    use address localhost  # only accept connection from localhost
+   * #    allow localhost        # allow localhost to connect to the server and
+   * allow admin:monit      # require user 'admin' with password 'monit'
+    
+ - run monit
+  + monit -c monitrc
+ 
+5. check 
+ - check process
+  + ps -ef | grep monit
  - check service page
   + access http://127.0.0.1:2812 on the browser with account admin/monit
   
