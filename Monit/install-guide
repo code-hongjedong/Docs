@@ -1,0 +1,20 @@
+
+1. References
+ - https://bitbucket.org/tildeslash/monit/
+ 
+2. Pre-requisites
+ - CentOS 7.x
+ 
+3. Installation
+ - curl -LO# ...
+ - tar xvzf ...
+ - cd ...
+ - ./bootstrap
+ - ./configure
+ - make
+ - make install
+  
+4. Post-installation
+ - check service page
+  + access http://127.0.0.1:2812 on the browser with account admin/monit
+  
