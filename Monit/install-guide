@@ -22,7 +22,7 @@
  - change mode and owner of monitrc file
   + chmod 700 monitrc
   + chmod $owner:$group monitrc
-  + edit monitrc to access remote client 
+  + edit monitrc to access from remote client 
    * set httpd port 8080
    * #set httpd port 8080 and
    * #    use address localhost  # only accept connection from localhost
