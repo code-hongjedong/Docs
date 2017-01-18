@@ -1,0 +1,34 @@
+
+1. References
+ - Official site 
+  + https://mmonit.com/monit/
+ - Document
+  + https://mmonit.com/monit/documentation/monit.html
+  
+2. Configuration
+ - monitrc
+  + default location
+   * ~/.monitrc or /etc/monitrc
+ - monit daemon
+  + ip/port : 127.0.0.1:2812 by default
+  + account : admin/monit by default
+  
+3. Command-line commands
+ - check version
+  + monit -V
+ - check control file for syntax errors
+  + monit -t
+ - Start/Stop monit process 
+  + start 
+   * monit 
+   * monit -c /var/monit/monitrc 
+  + stop
+   * monit quit
+  
+4. managing services
+ - e.g. monit -g www stop
+  
+4. Add-ons
+ - pingdom (https://www.pingdom.com/)
+ - 
+ 
